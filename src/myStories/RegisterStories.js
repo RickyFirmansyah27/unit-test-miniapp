@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "bulma/css/bulma.css";
+import { Button } from "./Button";
 
-const Register = () => {
+const RegisterStories = ({model , label }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('\n Nama :' + username + '\n Email:' + email + '\n Password:' + password);
+    console.log('\n Nama :'+username+'\n Email:'+email+'\n Password:'+ password);
   };
 
   return (
@@ -16,10 +17,9 @@ const Register = () => {
       <div className="container">
         <form onSubmit={handleSubmit}>
           <div className="field">
-            <label className="label" htmlFor="username">Username</label>
+            <label className="label">Username</label>
             <div className="control">
               <input
-                id="username"
                 className="input"
                 type="text"
                 value={username}
@@ -29,10 +29,9 @@ const Register = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label" htmlFor="email">Email</label>
+            <label className="label">Email</label>
             <div className="control">
               <input
-                id="email"
                 className="input"
                 type="text"
                 value={email}
@@ -42,10 +41,9 @@ const Register = () => {
             </div>
           </div>
           <div className="field">
+            <label className="label">Password</label>
             <div className="control">
-              <label className="label" htmlFor="password">Password</label>
               <input
-                id="password"
                 className="input"
                 type="password"
                 value={password}
@@ -56,7 +54,7 @@ const Register = () => {
           </div>
           <div className="field is-grouped">
             <div className="control">
-              <button className="button is-link">Submit</button>
+            <Button onClick={handleSubmit} model={model}>{label}</Button>
             </div>
           </div>
         </form>
@@ -65,4 +63,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterStories;

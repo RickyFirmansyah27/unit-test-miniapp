@@ -3,19 +3,14 @@ import {
 } from "react-router-dom"
 import Sidebar from "./Menu/Sidebar";
 import { MainRoute } from "./Menu/Maps";
-//React Component
-// import Content from "./ClassComponent/content";
-// import Profile from "./ClassComponent/profile";
-// import Greeting from "./ClassComponent/greeting";
-// Hooks React
-// import HooksProfile from "./FunctionalComponent/HookProfile";
-// import HooksContent from "./FunctionalComponent/HooksContent";
 
 // import Modal from "./Menu/Modal";
 // import LoginPage from "./Views/LoginPage";
 // import RegisterPage from "./Views/RegisterPage";
 // import Main from "./Views/Index";
 // import GreetingPage from "./Views/GreetingPage";
+import ReduxPage from "./Redux/ReduxPage";
+import SelectorPage from "./Redux/SelectorPage";
 
 
 
@@ -40,6 +35,13 @@ function App() {
             <Route path="/g" element={<Greeting />} />
             <Route path="/hp" element={<HooksProfile />} />
             <Route path="/hc" element={<HooksContent />} />  */}
+
+            {/* Unit Test Route */}
+            <Route path="/redux" element={<ReduxPage />} />
+            <Route path="/selector" element={<SelectorPage />} />
+             {/* Unit Test Route */}
+
+           
 
 
             {MainRoute &&

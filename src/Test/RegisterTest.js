@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bulma/css/bulma.css";
 
-const Register = () => {
+const RegisterTest = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState('');
@@ -65,4 +65,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterTest;
